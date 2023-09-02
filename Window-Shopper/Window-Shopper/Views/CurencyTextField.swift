@@ -7,10 +7,18 @@
 
 import UIKit
 
+@IBDesignable
 class CurencyTextField: UITextField {
     
+    override func prepareForInterfaceBuilder() {
+        custumizeView()
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
+        custumizeView()
+    }
+    
+    func custumizeView() {
         backgroundColor =  UIColor(named: "TFBackgroundColor")
         layer.cornerRadius = 5.0
         textAlignment = .center
